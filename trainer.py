@@ -1,11 +1,13 @@
 from dataclasses import dataclass
 from typing import Callable
+
+from rich.progress import Progress
 from torch import Tensor
 from torch.nn import Module
 from torch.optim import Optimizer
 from torch.utils.data import DataLoader
+
 from utils import make_progress
-from rich.progress import Progress
 
 
 @dataclass

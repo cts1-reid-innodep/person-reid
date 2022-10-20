@@ -1,9 +1,9 @@
 from rich.progress import (
-    Progress,
-    TimeElapsedColumn,
-    TextColumn,
     BarColumn,
+    Progress,
     TaskProgressColumn,
+    TextColumn,
+    TimeElapsedColumn,
 )
 
 
