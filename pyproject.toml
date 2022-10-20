@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "prid"
+name = "person-reid"
 version = "0.1.0"
 description = ""
 authors = ["Charlie Mae <mae.charlie@icloud.com>"]
