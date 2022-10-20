@@ -1,7 +1,7 @@
 from random import choice
-from torch import Tensor
+
+from torch import Tensor, cdist, logical_not, nonzero, stack
 from torch.nn import TripletMarginLoss
-from torch import nonzero, logical_not, cdist, stack
 
 
 class TripletLoss:
