@@ -23,9 +23,7 @@ def download_dataset(root: Path | str = "data"):
     Download the Market-1501 dataset into `market1501` directory under `root`.
     """
 
-    DOWNLOAD_URL = (
-        "https://github.com/maecharlie/prid/releases/download/v0.1.0/market1501.zip"
-    )
+    DOWNLOAD_URL = "https://github.com/maecharlie/person-reid/releases/download/v0.1.0/market1501.zip"
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
 
