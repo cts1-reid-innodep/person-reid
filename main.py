@@ -5,7 +5,7 @@ import torch
 from torch.optim import Adam
 from torch.utils.data import DataLoader
 from torch.utils.data.dataloader import default_collate
-from torchvision.transforms import Compose, Normalize, Resize, ToTensor
+from tranform import Transform
 
 from dataset import ImageWithIdentityDataset, Market1501
 from loss import TripletLoss
@@ -16,22 +16,12 @@ from utils import make_progress
 
 rich.traceback.install()
 device = "cuda" if torch.cuda.is_available() else "cpu"
-
-# Data Loaders
-transform = Compose(
-    [
-        Resize((256, 128)),
-        ToTensor(),
-        Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ]
-)
-
 market1501 = Market1501()
 
 train_dataset = ImageWithIdentityDataset(
     dataset=market1501.train["dataset"],
     identities=market1501.train["identities"],
-    transform=transform,
+    transform=Transform(),
 )
 
 
